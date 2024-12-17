@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frosty Race - Ðang ký ô</title>
+    <style>
+        body { margin: 0; text-align: center; background-color: #333; }
+        #map { position: relative; width: 600px; margin: auto; }
+        .box {
+            position: absolute;
+            width: 100px; height: 100px;
+            border: 2px solid transparent; cursor: pointer;
+        }
+        .box:hover { border: 2px solid yellow; }
+    </style>
+</head>
+<body>
+    <h1 style="color: white;">Frosty Race: Ch?n ô dang ký</h1>
+    <div id="map">
+        <img src="map.jpg" alt="Frosty Map" style="width: 100%;">
+        <!-- T?o các vùng click -->
+        <div class="box" style="top: 10px; left: 10px;" onclick="register('A1')"></div>
+        <div class="box" style="top: 10px; left: 120px;" onclick="register('B1')"></div>
+        <div class="box" style="top: 120px; left: 10px;" onclick="register('A2')"></div>
+        <div class="box" style="top: 120px; left: 120px;" onclick="register('B2')"></div>
+    </div>
+    <script>
+        function register(box) {
+            alert(`B?n dã ch?n ô ${box}`);
+            window.open('https://forms.google.com/xyz?entry=' + box, '_blank'); // Link Google Form
+        }
+    </script>
+</body>
+</html>
